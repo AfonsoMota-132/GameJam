@@ -1,23 +1,67 @@
-extends AnimatedSprite2D
+extends CharacterBody2D
 
-const GRAVITY = 980 # Adjust as needed, project default is often used
-var velocity = Vector2.ZERO
+@export var speed := 80.0
+@export var dash_speed := 120.0
+@export var dash_time := 0.5
+@export var gravity := 350.0
+@export var jump_velocity := -75.0
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+var facing_dir := 1
+var is_dashing := false
+var dash_timer := 0.0
 
 func _physics_process(delta):
-	# Apply gravity when not on the floor
+	if is_dashing:
+		update_dash(delta)
+	else:
+		update_movement(delta)
+	update_animation()
+	move_and_slide()
+
+func update_animation():
+	if !is_on_floor():
+		sprite.play("jump")
+	elif is_dashing:
+		sprite.play("dash")
+	elif velocity.x != 0:
+		sprite.play("walk")
+	else:
+		sprite.play("idle")
+	if facing_dir > 0:
+		sprite.flip_h = false   # facing right
+	elif facing_dir < 0:
+		sprite.flip_h = true 
+
+	move_and_slide()
+
+func update_movement(delta):
 	if not is_on_floor():
-		velocity.y += GRAVITY * delta
-	
-	# Handle movement (e.g., left/right) here...
-	# velocity.x = ...
+		velocity.y += gravity * delta
 
-	move_and_slide() # Moves the player and handles collisions
+	if Input.is_action_just_pressed("Space") and is_on_floor():
+		velocity.y = jump_velocity
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+	var direction := Input.get_axis("Left", "Right")
+	if direction != 0:
+		facing_dir = sign(direction)
 
+	if Input.is_action_just_pressed("Dash"):
+		start_dash()
+		return
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	velocity.x = direction * speed
+
+func start_dash():
+	is_dashing = true
+	dash_timer = dash_time
+	velocity.x = facing_dir * dash_speed
+	velocity.y = 0
+
+func update_dash(delta):
+	dash_timer -= delta
+	velocity.x = facing_dir * dash_speed
+
+	if dash_timer <= 0:
+		is_dashing = false
