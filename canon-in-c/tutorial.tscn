@@ -108,8 +108,8 @@ tile_set = SubResource("TileSet_5mrt3")
 position = Vector2(23, -22)
 
 [node name="DoubleJumpCollectible" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("3_5mrt3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoubleJumpCollectible"]

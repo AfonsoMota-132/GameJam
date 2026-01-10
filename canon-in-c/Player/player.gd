@@ -15,7 +15,7 @@ var dash_timer := 0.0
 var double_jump := false
 var can_double_jump := false
 
-func _on_Collectible_body_entered(body):
+func _on_body_entered(body):
 	print (body.name)
 	match body.name:
 		"DoubleJumpCollectible":
@@ -34,6 +34,12 @@ func _physics_process(delta):
 		double_jump = false
 	update_animation()
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider():
+			if collision.get_collider().name=="player":
+				queue_free()
+
 
 func update_animation():
 	if !is_on_floor():

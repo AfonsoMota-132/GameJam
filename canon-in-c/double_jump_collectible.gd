@@ -3,7 +3,7 @@ extends Area2D
 
 var ability = ""
 
-func _on_Collectible_body_entered(body):
+func dete(body):
 	print(body.name)
 	if body.is_in_group("player"):
 		body.unlock_ability(ability)
