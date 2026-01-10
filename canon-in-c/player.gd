@@ -40,14 +40,14 @@ func update_movement(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("Space") and is_on_floor():
+	if Input.is_action_just_pressed("Space") and is_on_floor() and !is_dashing:
 		velocity.y = jump_velocity
 
 	var direction := Input.get_axis("Left", "Right")
 	if direction != 0:
 		facing_dir = sign(direction)
 
-	if Input.is_action_just_pressed("Dash"):
+	if Input.is_action_just_pressed("Dash") and is_on_floor():
 		start_dash()
 		return
 
