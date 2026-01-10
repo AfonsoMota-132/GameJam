@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://bp2m08n3hfc5e"]
+[gd_scene load_steps=8 format=4 uid="uid://bp2m08n3hfc5e"]
 
 [ext_resource type="Script" uid="uid://cp62so1edj3s8" path="res://Tutorial.gd" id="1_7n6eb"]
 [ext_resource type="Texture2D" uid="uid://ja23s0x4kjyj" path="res://Space Cave Tileset.png" id="2_yb1ct"]
+[ext_resource type="Script" uid="uid://ck2vj60dopdtg" path="res://double_jump_collectible.gd" id="3_5mrt3"]
+[ext_resource type="Texture2D" uid="uid://banbxu7lkrtjh" path="res://dialogue/pixel-art-coin-with-dollar-symbol-8-bit-gold-coin-for-retro-games-and-economic-design-png.png" id="4_rwowx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehuit"]
 texture = ExtResource("2_yb1ct")
@@ -92,6 +94,9 @@ texture = ExtResource("2_yb1ct")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ehuit")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hu44a"]
+radius = 185.71436
+
 [node name="Tutorial" type="Node2D"]
 script = ExtResource("1_7n6eb")
 
@@ -101,3 +106,18 @@ tile_set = SubResource("TileSet_5mrt3")
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(23, -22)
+
+[node name="DoubleJumpCollectible" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_5mrt3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoubleJumpCollectible"]
+position = Vector2(145, -37)
+scale = Vector2(0.069999985, 0.069999985)
+shape = SubResource("CircleShape2D_hu44a")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoubleJumpCollectible"]
+position = Vector2(145, -37)
+scale = Vector2(0.069999985, 0.069999985)
+texture = ExtResource("4_rwowx")
