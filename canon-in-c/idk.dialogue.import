@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cye6em5tbidr0"
+path="res://.godot/imported/idk.dialogue-f49752f85bfef93cbd07beb17080ff27.tres"
+
+[deps]
+
+source_file="res://idk.dialogue"
+dest_files=["res://.godot/imported/idk.dialogue-f49752f85bfef93cbd07beb17080ff27.tres"]
+
+[params]
+
+defaults=true

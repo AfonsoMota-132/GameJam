@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqwpqncov1bvm"]
+
+[ext_resource type="Script" uid="uid://dwcs2sdmpwl3h" path="res://turorial_dialog.gd" id="1_02ax3"]
+[ext_resource type="Texture2D" uid="uid://cs3fcri1ffl5m" path="res://textballon.png" id="2_0bfr3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 39.0
+offset_bottom = 39.0
+script = ExtResource("1_02ax3")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -128.0
+offset_right = 467.0
+offset_bottom = 7.0
+texture = ExtResource("2_0bfr3")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = -114.0
+offset_right = 188.0
+offset_bottom = -91.0
