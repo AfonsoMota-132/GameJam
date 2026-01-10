@@ -9,7 +9,6 @@ func _ready():
 	add_child(player)
 	
 	# Spawn the tutorial dialog (CanvasLayer handles camera-relative automatically)
-	DialogueManager.show_dialogue_balloon(load("res://dialogue/tutorial.dialogue"), "start")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
