@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dsvt6bqhf504c" path="res://Player/SPRITE_SHEET.png" id="2_i3pqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-radius = 5.0
-height = 18.0
+radius = 3.3333335
+height = 10.666667
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ntmi"]
 atlas = ExtResource("2_i3pqv")
@@ -247,10 +247,8 @@ script = ExtResource("1_onrkg")
 light_mask = 3
 visibility_layer = 3
 position = Vector2(-1, -2)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CapsuleShape2D_onrkg")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -5)
