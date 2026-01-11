@@ -1,7 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://dmuhcij7n64od"]
+[gd_scene load_steps=46 format=3 uid="uid://dmuhcij7n64od"]
 
 [ext_resource type="Script" uid="uid://b2fpk7tdp5pl2" path="res://Player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dsvt6bqhf504c" path="res://Player/SPRITE_SHEET.png" id="2_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 radius = 3.3333335
@@ -329,3 +330,10 @@ position = Vector2(-3, -5)
 sprite_frames = SubResource("SpriteFrames_2wuci")
 animation = &"die"
 frame_progress = 0.510457
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_btcbx")
+volume_db = -2.0
+autoplay = true
+attenuation = 3.6049953
+metadata/_edit_lock_ = true

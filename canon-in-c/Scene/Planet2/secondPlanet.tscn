@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://dp5b8n0uvk7hm"]
+[gd_scene load_steps=6 format=4 uid="uid://dp5b8n0uvk7hm"]
 
 [ext_resource type="Script" uid="uid://ct6anfddsdi21" path="res://Scene/Planet2/secondPlanet.gd" id="1_k6xnl"]
 [ext_resource type="Texture2D" uid="uid://cjkx70w5rms3i" path="res://tiles/planet2/SecondMapBck.png" id="2_k6xnl"]
 [ext_resource type="Texture2D" uid="uid://duvfus2wq8a1k" path="res://tiles/planet2/IceSet.png" id="3_yf16d"]
-[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_86uni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6xnl"]
 texture = ExtResource("3_yf16d")
@@ -62,9 +61,10 @@ metadata/_edit_lock_ = true
 scale = Vector2(2.8, 2.8)
 tile_map_data = PackedByteArray("AAAAAP//AwABAAAAAAABAP//AwABAAAAAAACAP//AwABAAAAAAAZAP//AwAEAAIAAAAaAP//AwAEAAIAAAAHAPj/AwACAAQAAAAAAPb/AwADAAIAAAABAPb/AwADAAIAAAACAPb/AwADAAIAAAAGAPj/AwACAAQAAAAbAP//AwAEAAIAAAAcAP//AwAEAAIAAAAZAP7/AwAEAAIAAAAZAP3/AwAEAAIAAAAZAPz/AwAEAAIAAAAZAPv/AwAEAAIAAAAZAPr/AwAEAAIAAAAZAPn/AwAEAAIAAAAZAPj/AwAEAAIAAAAZAPf/AwAEAAIAAAAZAPb/AwAEAAIAAAAZAPX/AwAEAAIAAAAQAPT/AwACAAQAAAAPAPT/AwACAAQAAAARAPz/AwACAAQAAAASAPz/AwACAAQAAAANAPn/AwACAAQAAAAMAPn/AwACAAQAAAALAPn/AwACAAQAAAAKAP//AwABAAAAAAALAP//AwABAAAAAAA=")
 tile_set = SubResource("TileSet_yf16d")
+metadata/_edit_lock_ = true
 
 [node name="DashPoint" type="Marker2D" parent="."]
-position = Vector2(65, -479)
+position = Vector2(112, -93)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(54, -187)
@@ -73,17 +73,13 @@ metadata/_edit_lock_ = true
 [node name="GemPoint" type="Marker2D" parent="."]
 position = Vector2(1217, -79)
 scale = Vector2(2, 2)
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(641, -357)
 scale = Vector2(22554710, -768805)
 limit_enabled = false
-
-[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_86uni")
-volume_db = -2.0
-autoplay = true
-attenuation = 3.6049953
 metadata/_edit_lock_ = true
 
 [node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_lock_ = true

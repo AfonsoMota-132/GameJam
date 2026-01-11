@@ -8,32 +8,22 @@ var BorderScene := preload("res://extraScenes/Border.tscn")
 var Cloak := preload("res://extraScenes/Collectable.tscn")
 var Crystal := preload("res://extraScenes/Collectable.tscn")
 var player = null
-#@onready var nextScene = preload("res://Scene/Planet2/secondPlanet.tscn")
+@onready var nextScene = preload("res://loading/loadingLastStop/loadingLastStop.tscn")
 
-func _on_collectable_collected(ability):
-	if ability != "win" or not player:
-		return
+func _dash_dialog(_ability):
+	print("wtf")
+	DialogueManager.show_dialogue_balloon( load("res://Scene/Planet1/Tutorial.dialogue"), "start")
+	
 
-	# Make player persistent
-	#if player.get_parent() != get_tree().get_root():
-	#	player.get_parent().remove_child(player)
-	#	get_tree().get_root().add_child(player)
-	#	player.set_as_top_level(true)
-#
-	## Load next scene
-	#var scene_instance = nextScene.instantiate()
-	## Free current scene and set new scene
-	#var old_scene = get_tree().get_current_scene()
-	#get_tree().set_current_scene(scene_instance)
-	#get_tree().get_root().add_child(scene_instance)
-	#if old_scene:
-	#	old_scene.queue_free()
-
-	# Move player to spawn point in the new scene
-	#var spawn_point = scene_instance.get_node("SpawnPoint")
-	#if spawn_point:
-	#	player.global_position = spawn_point.global_position
-
+func _on_collectable_collected(_ability):
+	# Load next scene
+	var scene_instance = nextScene.instantiate()
+	# Free current scene and set new scene
+	var old_scene = get_tree().get_current_scene()
+	get_tree().set_current_scene(scene_instance)
+	get_tree().get_root().add_child(scene_instance)
+	if old_scene:
+		old_scene.queue_free()
 
 func _ready():
 	var hasPlayer = find_child("Player", false, true)
@@ -57,6 +47,7 @@ func _ready():
 	crystal.ability = "win"
 	crystal.image = "res://tiles/planet1/Gem.png"
 	call_deferred("add_child", crystal)
+	dash.connect("collected", Callable(self, "_on_collectable_collected"))
 	crystal.connect("collected", Callable(self, "_on_collectable_collected"))
 
 

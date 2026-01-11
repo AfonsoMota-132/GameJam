@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bp2m08n3hfc5e"]
+[gd_scene load_steps=6 format=4 uid="uid://bp2m08n3hfc5e"]
 
 [ext_resource type="Script" uid="uid://cp62so1edj3s8" path="res://Scene/Planet1/Tutorial.gd" id="1_rlqwt"]
 [ext_resource type="Texture2D" uid="uid://c4by5qthabqjr" path="res://tiles/planet1/planeta1.png" id="2_g030n"]
 [ext_resource type="Texture2D" uid="uid://cjb8r01s0ngk8" path="res://tiles/planet1/Mossy - TileSet.png" id="3_daaxd"]
-[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_3g8yq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlqwt"]
 texture = ExtResource("3_daaxd")
@@ -111,13 +110,6 @@ position = Vector2(64, -500)
 position = Vector2(641, -357)
 scale = Vector2(22554710, -768805)
 limit_enabled = false
-metadata/_edit_lock_ = true
-
-[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_3g8yq")
-volume_db = -2.0
-autoplay = true
-attenuation = 3.6049953
 metadata/_edit_lock_ = true
 
 [node name="Node2D" type="Node2D" parent="."]

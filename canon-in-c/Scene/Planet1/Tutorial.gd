@@ -8,7 +8,7 @@ var BorderScene := preload("res://extraScenes/Border.tscn")
 var DoubleJump := preload("res://extraScenes/Collectable.tscn")
 var Crystal := preload("res://extraScenes/Collectable.tscn")
 var player = null
-@onready var nextScene = load("res://Scene/Planet2/secondPlanet.tscn")
+@onready var nextScene = load("res://loading/loadingPlanet2/loadingPlanet2.tscn")
 
 func _on_collectable_collected(ability):
 	if ability != "win" or not player:
