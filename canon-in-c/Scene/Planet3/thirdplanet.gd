@@ -7,10 +7,19 @@ var PlayerScene := preload("res://Player/player.tscn")
 var BorderScene := preload("res://extraScenes/Border.tscn")
 var DoubleJump := preload("res://extraScenes/Collectable.tscn")
 var Crystal := preload("res://extraScenes/Collectable.tscn")
+@onready var nextScene = preload("res://Scene/endScene/endScene.tscn")
 
 func _on_collectable_collected(ability):
 	if ability == "win":
-		print("next stage yipieee")
+		# Load next scene
+		var scene_instance = nextScene.instantiate()
+		# Free current scene and set new scene
+		var old_scene = get_tree().get_current_scene()
+		get_tree().set_current_scene(scene_instance)
+		get_tree().get_root().add_child(scene_instance)
+		if old_scene:
+			old_scene.queue_free()
+		
 
 func _ready():
 	# Adding Player
