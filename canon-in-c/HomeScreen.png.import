@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn116w6m22fgr"
-path="res://.godot/imported/gem.png-81eaff681044f6e3f27ce89a594760cf.ctex"
+uid="uid://ye32e3lu5djs"
+path="res://.godot/imported/HomeScreen.png-444273c55d48c89089dcf806235dbbb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/planet1/gem.png"
-dest_files=["res://.godot/imported/gem.png-81eaff681044f6e3f27ce89a594760cf.ctex"]
+source_file="res://HomeScreen.png"
+dest_files=["res://.godot/imported/HomeScreen.png-444273c55d48c89089dcf806235dbbb1.ctex"]
 
 [params]
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxcu4e5frwfcn"]
+[gd_scene load_steps=12 format=3 uid="uid://dxcu4e5frwfcn"]
 
-[ext_resource type="Script" uid="uid://bu1s3ow5nrxi6" path="res://dialogue/balloon.gd" id="1_36de5"]
-[ext_resource type="Texture2D" uid="uid://cs3fcri1ffl5m" path="res://textballon.png" id="2_3fodd"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Script" uid="uid://bu1s3ow5nrxi6" path="res://dialogue/balloon.gd" id="1_j81sh"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_p2t4i"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_qoi4o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -100,9 +99,9 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer"]
+[node name="narrator" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_36de5")
+script = ExtResource("1_j81sh")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -129,7 +128,6 @@ metadata/_edit_lock_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Balloon/MarginContainer"]
 position = Vector2(576, 110.25)
 scale = Vector2(1.3740741, 1.3740741)
-texture = ExtResource("2_3fodd")
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/Sprite2D"]
@@ -155,7 +153,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/Sprite2D/MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/Sprite2D/MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_p2t4i")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -193,7 +191,7 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_72ixx")
+script = ExtResource("3_qoi4o")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]

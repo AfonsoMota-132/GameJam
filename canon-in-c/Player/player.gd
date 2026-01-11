@@ -9,7 +9,6 @@ extends CharacterBody2D
 @export var jump_velocity := -290.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var sound: AudioStreamPlayer2D = $Ambient
 
 var facing_dir := 1
 var is_dashing := false
@@ -21,8 +20,8 @@ var died := false
 var timer_death := 0.0
 var	time_off_floor := 0.0
 
-func get_ability(str):
-	if str == "double_jump":
+func get_ability(ability):
+	if ability == "double_jump":
 		can_double_jump = true
 
 func _physics_process(delta):
