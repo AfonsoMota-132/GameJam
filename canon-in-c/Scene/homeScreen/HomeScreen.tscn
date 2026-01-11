@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://cxqevpwt2p887"]
+
+[ext_resource type="Script" uid="uid://ckfw48g1271x1" path="res://Scene/homeScreen/homeScreen.gd" id="1_ngl5c"]
+[ext_resource type="Texture2D" uid="uid://ye32e3lu5djs" path="res://HomeScreen.png" id="1_x2un0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngl5c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4hw20"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkgsb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er3kj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_djauf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hogwx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_incnx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ngl5c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_top = -719.0
+offset_right = 1919.0
+offset_bottom = 361.0
+scale = Vector2(0.67917657, 0.66359794)
+texture = ExtResource("1_x2un0")
+metadata/_edit_lock_ = true
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 696.0
+offset_top = -308.0
+offset_right = 969.0
+offset_bottom = -240.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ngl5c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4hw20")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mkgsb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_er3kj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_djauf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hogwx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_incnx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, -360)
+metadata/_edit_lock_ = true

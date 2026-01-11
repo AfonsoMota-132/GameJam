@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgwedkgstsxf5"]
 
-[ext_resource type="Script" uid="uid://c2c70t27yr8ko" path="res://death_box.gd" id="1_m3ky0"]
+[ext_resource type="Script" uid="uid://c2c70t27yr8ko" path="res://death_box.gd" id="1_2vb5m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwdiv"]
 size = Vector2(1286, 40)
@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_xwdiv")
 metadata/_edit_lock_ = true
 
 [node name="DeathArea" type="Area2D" parent="."]
-script = ExtResource("1_m3ky0")
+script = ExtResource("1_2vb5m")
 
 [node name="DeathAreaCollission" type="CollisionShape2D" parent="DeathArea"]
 position = Vector2(639, 13)

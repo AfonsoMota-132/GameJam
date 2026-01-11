@@ -24,16 +24,17 @@ func _ready():
 	var double = DoubleJump.instantiate()
 	double.global_position = doubleJump.global_position
 	double.ability = "double_jump"
-	double.image = "res://tiles/coin.png"
+	double.image = "res://assets/Boots.png"
 	add_child(double)
 	# Adding Crystal to end game
 	var crystal = DoubleJump.instantiate()
 	crystal.global_position = gemPoint.global_position
 	crystal.ability = "win"
-	crystal.image = "res://tiles/planet1/gem.png"
+	crystal.image = "res://assets/Gem.png"
 	add_child(crystal)
 	crystal.connect("collected", Callable(self, "_on_collectable_collected"))
+	DialogueManager.show_dialogue_balloon( load("res://Scene/Planet1/Tutorial.dialogue"), "start")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

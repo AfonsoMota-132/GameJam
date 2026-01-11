@@ -328,4 +328,4 @@ shape = SubResource("CapsuleShape2D_onrkg")
 position = Vector2(-3, -5)
 sprite_frames = SubResource("SpriteFrames_2wuci")
 animation = &"die"
-frame_progress = 0.85335225
+frame_progress = 0.510457
