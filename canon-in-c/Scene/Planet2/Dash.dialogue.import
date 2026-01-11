@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://drlr1gyp6pxm2"
+path="res://.godot/imported/Dash.dialogue-ac3cedf47460f2201a01e12163452b51.tres"
+
+[deps]
+
+source_file="res://Scene/Planet2/Dash.dialogue"
+dest_files=["res://.godot/imported/Dash.dialogue-ac3cedf47460f2201a01e12163452b51.tres"]
+
+[params]
+
+defaults=true

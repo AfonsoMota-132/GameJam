@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://dfkrtde110rwn"]
+[gd_scene load_steps=14 format=4 uid="uid://dfkrtde110rwn"]
 
 [ext_resource type="Script" uid="uid://jf4e6prpn6tw" path="res://Scene/Planet3/thirdplanet.gd" id="1_kingr"]
 [ext_resource type="Texture2D" uid="uid://cijapys65lo3w" path="res://tiles/planet3/planeta2.png" id="2_m7o3k"]
 [ext_resource type="Texture2D" uid="uid://bn1y33vhkqbxd" path="res://tiles/planet3/FireSet.png" id="3_gb46k"]
-[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_pvtd5"]
+[ext_resource type="Script" uid="uid://6abdwupuq8lx" path="res://Scene/Planet3/death.gd" id="5_gb46k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tf2b"]
 texture = ExtResource("3_gb46k")
@@ -41,6 +41,27 @@ texture = ExtResource("3_gb46k")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_5tf2b")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7o3k"]
+size = Vector2(179, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb46k"]
+size = Vector2(90, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tf2b"]
+size = Vector2(20, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlmp5"]
+size = Vector2(90, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fen76"]
+size = Vector2(270, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwe42"]
+size = Vector2(46, 357)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bivek"]
+size = Vector2(47, 357)
+
 [node name="thirdPlanet" type="Node2D"]
 script = ExtResource("1_kingr")
 
@@ -61,27 +82,57 @@ metadata/_edit_lock_ = true
 scale = Vector2(2.8, 2.8)
 tile_map_data = PackedByteArray("AAAAAP//AQACAAIAAAABAP//AQACAAIAAAACAP//AQACAAIAAAAZAP//AQABAAIAAAAaAP//AQABAAIAAAAbAP//AQABAAIAAAAcAP//AQABAAIAAAAYAP//AQABAAIAAAAMAP3/AQABAAIAAGAMAPz/AQABAAIAAGAMAP7/AQABAAIAAAAMAPv/AQABAAIAAGAMAPn/AQABAAIAAAALAPn/AQABAAIAAAAKAPn/AQABAAIAAAADAP//AQACAAIAAAAMAPr/AQABAAIAAGABAPj/AQABAAEAACAAAPr/AQABAAQAAHABAPf/AQABAAIAACACAPX/AQABAAQAAAADAPX/AQABAAQAAAAEAPX/AQABAAQAAAAFAPX/AQABAAQAAAAGAPX/AQABAAQAAAAHAPX/AQABAAQAAAAIAP//AQABAAIAAAAJAP//AQABAAIAAAAKAP//AQABAAIAAAALAP//AQABAAIAAAAMAP//AQABAAIAAAAIAPz/AQABAAIAAAAHAPz/AQABAAIAAAAGAPz/AQABAAIAAAAFAPz/AQABAAIAAAAEAPz/AQABAAIAAAADAPz/AQABAAIAAAACAPz/AQABAAIAAAABAPz/AQABAAIAAAAAAPz/AQABAAIAAAAAAPv/AQABAAQAAFAAAPn/AQABAAEAAGAEAPn/AQABAAIAAAAFAPn/AQABAAIAAAAGAPn/AQAAAAMAADAHAPn/AQAAAAMAADAIAPn/AQAAAAMAADAJAPn/AQAAAAMAACALAPr/AQABAAQAACAKAPr/AQABAAQAACANAPn/AQABAAIAAAAOAPn/AQABAAIAABABAPn/AQABAAQAAHACAPb/AQABAAIAACADAPb/AQABAAIAACAEAPb/AQABAAIAACAFAPb/AQABAAIAACAGAPb/AQABAAIAACAHAPb/AQABAAIAACAIAPb/AQABAAIAACAAAPb/AQABAAIAAAABAPX/AQABAAIAAAADAPP/AQABAAIAAAAEAPP/AQABAAIAAAAAAPj/AQABAAEAACAAAPf/AQABAAIAACABAPb/AQABAAIAAAAPAPn/AQABAAIAAAAPAPj/AQABAAIAAGAPAPf/AQABAAIAAGAPAPb/AQABAAIAAGAPAPX/AQABAAIAAGAPAPT/AQABAAIAAGAPAPP/AQABAAIAAGAPAPL/AQABAAIAAGAKAPL/AQACAAIAAAALAPL/AQACAAIAAAAMAPL/AQABAAIAAAAUAPD/AQABAAIAAGAUAPH/AQABAAIAAGAUAPL/AQABAAIAAGAUAPP/AQABAAIAAGAUAPT/AQABAAIAAGAUAPX/AQABAAIAAGAUAPb/AQABAAIAAGAUAPf/AQABAAIAAGAUAPj/AQABAAIAAGAUAPn/AQABAAIAAGAQAPL/AQABAAQAAFAQAPP/AQABAAQAAFAQAPT/AQABAAQAAFAQAPX/AQABAAQAAFAQAPb/AQABAAQAAFAQAPf/AQABAAQAAFAQAPj/AQABAAQAAFAQAPn/AQABAAQAAFATAPL/AQABAAQAAGATAPP/AQABAAQAAGATAPT/AQABAAQAAGATAPX/AQABAAQAAGATAPb/AQABAAQAAGATAPf/AQABAAQAAGATAPj/AQABAAQAAGATAPn/AQABAAQAAGARAP3/AQABAAIAAAASAP3/AQABAAIAAAA=")
 tile_set = SubResource("TileSet_yf16d")
+metadata/_edit_lock_ = true
 
 [node name="DoubleJump" type="Marker2D" parent="."]
 position = Vector2(221, -382)
+metadata/_edit_lock_ = true
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(27, -85)
+metadata/_edit_lock_ = true
 
 [node name="GemPoint" type="Marker2D" parent="."]
 position = Vector2(1217, -79)
 scale = Vector2(2, 2)
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(641, -357)
 scale = Vector2(22554710, -768805)
 limit_enabled = false
-
-[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_pvtd5")
-volume_db = -2.0
-autoplay = true
-attenuation = 3.6049953
 metadata/_edit_lock_ = true
 
 [node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_gb46k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(358, -301)
+shape = SubResource("RectangleShape2D_m7o3k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(493, -235)
+shape = SubResource("RectangleShape2D_gb46k")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(35, -224)
+shape = SubResource("RectangleShape2D_5tf2b")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(45, -291)
+shape = SubResource("RectangleShape2D_jlmp5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(224, -471)
+shape = SubResource("RectangleShape2D_fen76")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(738, -447.5)
+shape = SubResource("RectangleShape2D_dwe42")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(874.5, -448.5)
+shape = SubResource("RectangleShape2D_bivek")

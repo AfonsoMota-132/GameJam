@@ -10,11 +10,6 @@ var Crystal := preload("res://extraScenes/Collectable.tscn")
 var player = null
 @onready var nextScene = preload("res://loading/loadingLastStop/loadingLastStop.tscn")
 
-func _dash_dialog(_ability):
-	print("wtf")
-	DialogueManager.show_dialogue_balloon( load("res://Scene/Planet1/Tutorial.dialogue"), "start")
-	
-
 func _on_collectable_collected(_ability):
 	# Load next scene
 	var scene_instance = nextScene.instantiate()
@@ -49,7 +44,7 @@ func _ready():
 	call_deferred("add_child", crystal)
 	dash.connect("collected", Callable(self, "_on_collectable_collected"))
 	crystal.connect("collected", Callable(self, "_on_collectable_collected"))
-
+	DialogueManager.show_dialogue_balloon( load(""), "start")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
