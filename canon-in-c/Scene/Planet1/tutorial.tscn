@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=4 uid="uid://bp2m08n3hfc5e"]
+
+[ext_resource type="Script" uid="uid://cp62so1edj3s8" path="res://Scene/Planet1/Tutorial.gd" id="1_rlqwt"]
+[ext_resource type="Texture2D" uid="uid://c4by5qthabqjr" path="res://tiles/planet1/planeta1.png" id="2_g030n"]
+[ext_resource type="Texture2D" uid="uid://cjb8r01s0ngk8" path="res://tiles/planet1/Mossy - TileSet.png" id="3_daaxd"]
+[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_3g8yq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0cr88"]
+texture = ExtResource("3_daaxd")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-205.71704, -211.27698, 256, -216.83688, 256, 256, -205.71704, 256)
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(261.31622, 189.03723, 105.63849, 161.23767, 22.239685, 66.718994, 27.799622, -183.47739, 255.75635, -194.59723)
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+6:5/0 = 0
+5:5/0 = 0
+4:5/0 = 0
+3:5/0 = 0
+2:5/0 = 0
+1:5/0 = 0
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(11.119873, -5.5599365, -78.46074, 185.1673, -260.48962, 169.47516, -251.07434, -207.13634, -27.799622, -200.15714)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(258.22995, 167.08997, -246.83746, 155.69751, -246.83746, -163.29245, 255.75635, -194.59723)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(11.119873, -5.5599365, -78.46074, 185.1673, -260.48962, 169.47516, -251.07434, -207.13634, -27.799622, -200.15714)
+1:1/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -211.27698, 256, -216.83688, 256, 256, -256, 256)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -211.27698, 200.1571, -211.27698, 211.27698, 256, -256, 256)
+3:0/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(11.119873, -5.5599365, -78.46074, 185.1673, -260.48962, 169.47516, -251.07434, -207.13634, -27.799622, -200.15714)
+2:4/0 = 0
+3:4/0 = 0
+3:3/0 = 0
+3:2/0 = 0
+3:1/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+4:4/0 = 0
+4:3/0 = 0
+5:2/0 = 0
+5:1/0 = 0
+5:3/0 = 0
+6:1/0 = 0
+6:0/0 = 0
+5:0/0 = 0
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(189.87497, 246.83746, -167.08997, 254.4325, -148.10246, 170.88751, -246.83746, 155.69751, -246.83746, -163.29245, 250.63498, -163.29245, 254.43246, 148.10248, 197.47, 144.305)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(197.47, 243.03998, -167.08997, 254.4325, -148.10246, 170.88751, -246.83746, 155.69751, -246.83746, -163.29245, 205.06497, -155.69748)
+6:3/0 = 0
+6:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5mrt3"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_0cr88")
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_rlqwt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 2
+z_index = -1
+offset_left = -4.0
+offset_top = -719.0
+offset_right = 1916.0
+offset_bottom = 361.0
+scale = Vector2(0.66941786, 0.66941786)
+texture = ExtResource("2_g030n")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-522, 551)
+scale = Vector2(0.13, 0.13)
+tile_map_data = PackedByteArray("AABBALr/AAAAAAAAAABJALr/AAABAAAAAABRALr/AAABAAAAAABZALr/AAABAAAAAABhALr/AAABAAAAAACNALr/AAABAAAAAACVALr/AAABAAAAAACcALr/AAABAAAAAACGALr/AAAAAAAAAABCAKn/AAABAAMAAABJAKn/AAABAAMAAAA9AKn/AAABAAMAAABQAKn/AAABAAMAAABXAKn/AAACAAMAAACjALr/AAABAAAAAACqALr/AAABAAAAAACxALr/AAABAAAAAAC4ALr/AAABAAAAAAC/ALr/AAABAAAAAADCALr/AAACAAAAAAC7AKL/AAAAAAMAAADCAKL/AAABAAMAAADJAKL/AAACAAMAAABoALr/AAACAAAAAACuAJf/AAACAAMAAACmAJf/AAABAAMAAACeAJf/AAAAAAMAAACOAJL/AAACAAMAAACHAJL/AAABAAMAAAB/AJL/AAABAAMAAAB7AJL/AAABAAMAAABBAIj/AAABAAMAAABJAIj/AAABAAMAAACWAKz/AAAAAAMAAACeAKz/AAABAAMAAACmAKz/AAABAAMAAACuAKz/AAABAAMAAAC1AKz/AAACAAMAAABQAIj/AAACAAMAAABzAJL/AAAAAAMAAAA6AIj/AAABAAMAAAA=")
+tile_set = SubResource("TileSet_5mrt3")
+metadata/_edit_lock_ = true
+
+[node name="DoubleJump" type="Marker2D" parent="."]
+position = Vector2(89, -233)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(29, -67)
+metadata/_edit_lock_ = true
+
+[node name="GemPoint" type="Marker2D" parent="."]
+position = Vector2(297, -89)
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, -357)
+scale = Vector2(22554710, -768805)
+limit_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3g8yq")
+volume_db = -2.0
+autoplay = true
+attenuation = 3.6049953
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]

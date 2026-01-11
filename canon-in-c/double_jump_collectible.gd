@@ -1,18 +1,24 @@
 # Collectible.gd
 extends Area2D
 
+@onready var sprite := $Sprite
 var ability = ""
+var image: String = ""
 
-func dete(body):
-	print(body.name)
-	if body.is_in_group("player"):
-		body.unlock_ability(ability)
-		queue_free()
+signal collected(ability)
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	body_entered.connect(_on_body_entered)
+	if image != "":
+		sprite.texture = load(image)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_body_entered(body):
+	if body.name == "Player":
+		if ability == "win":
+			emit_signal("collected", ability)
+		else:
+			body.get_ability(ability)
+		collect()
+
+func collect():
+	queue_free()

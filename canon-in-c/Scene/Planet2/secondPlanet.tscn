@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=4 uid="uid://dp5b8n0uvk7hm"]
+
+[ext_resource type="Script" uid="uid://ct6anfddsdi21" path="res://Scene/Planet2/secondPlanet.gd" id="1_k6xnl"]
+[ext_resource type="Texture2D" uid="uid://cjkx70w5rms3i" path="res://tiles/planet2/SecondMapBck.png" id="2_k6xnl"]
+[ext_resource type="Texture2D" uid="uid://duvfus2wq8a1k" path="res://tiles/planet2/IceSet.png" id="3_yf16d"]
+[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_86uni"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6xnl"]
+texture = ExtResource("3_yf16d")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+0:4/0 = 0
+1:4/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+1:1/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+3:1/0 = 0
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+2:4/0 = 0
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+3:4/0 = 0
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020518, -8.122044, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
+4:1/0 = 0
+4:0/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yf16d"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_k6xnl")
+
+[node name="secondPlanet" type="Node2D"]
+script = ExtResource("1_k6xnl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 2
+z_index = -1
+offset_left = -4.0
+offset_top = -719.0
+offset_right = 1916.0
+offset_bottom = 361.0
+scale = Vector2(0.66941786, 0.66941786)
+texture = ExtResource("2_k6xnl")
+expand_mode = 3
+flip_h = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.087024316, 0.087024316)
+tile_map_data = PackedByteArray("AABBALr/AAAAAAAAAABJALr/AAABAAAAAABRALr/AAABAAAAAABZALr/AAABAAAAAABhALr/AAABAAAAAACNALr/AAABAAAAAACVALr/AAABAAAAAACcALr/AAABAAAAAACGALr/AAAAAAAAAABCAKn/AAABAAMAAABJAKn/AAABAAMAAAA9AKn/AAABAAMAAABQAKn/AAABAAMAAABXAKn/AAACAAMAAACjALr/AAABAAAAAACqALr/AAABAAAAAACxALr/AAABAAAAAAC4ALr/AAABAAAAAAC/ALr/AAABAAAAAADCALr/AAACAAAAAAC7AKL/AAAAAAMAAADCAKL/AAABAAMAAADJAKL/AAACAAMAAABoALr/AAACAAAAAACuAJf/AAACAAMAAACmAJf/AAABAAMAAACeAJf/AAAAAAMAAACOAJL/AAACAAMAAACHAJL/AAABAAMAAAB/AJL/AAABAAMAAAB7AJL/AAABAAMAAABBAIj/AAABAAMAAABJAIj/AAABAAMAAACWAKz/AAAAAAMAAACeAKz/AAABAAMAAACmAKz/AAABAAMAAACuAKz/AAABAAMAAAC1AKz/AAACAAMAAABQAIj/AAACAAMAAABzAJL/AAAAAAMAAAA6AIj/AAABAAMAAAA=")
+tile_set = SubResource("TileSet_yf16d")
+
+[node name="DoubleJump" type="Marker2D" parent="."]
+position = Vector2(89, -233)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(54, -187)
+metadata/_edit_lock_ = true
+
+[node name="GemPoint" type="Marker2D" parent="."]
+position = Vector2(297, -89)
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, -357)
+scale = Vector2(22554710, -768805)
+limit_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_86uni")
+volume_db = -2.0
+autoplay = true
+attenuation = 3.6049953
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]

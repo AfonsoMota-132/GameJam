@@ -1,48 +1,60 @@
 extends CharacterBody2D
 
-@export var speed := 80.0
-@export var dash_speed := 120.0
+@export var speed := 160.0
+@export var dash_speed := 240.0
 @export var dash_time := 0.5
+@export var death_time := 1.9
 @export var jump_time := 0.5
-@export var gravity := 350.0
-@export var jump_velocity := -85.0
+@export var gravity := 700.0
+@export var jump_velocity := -290.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sound: AudioStreamPlayer2D = $Ambient
 
 var facing_dir := 1
 var is_dashing := false
 var dash_timer := 0.0
 var double_jump := false
 var can_double_jump := false
+var can_dash := false
+var died := false
+var timer_death := 0.0
+var	time_off_floor := 0.0
 
-func _on_body_entered(body):
-	print (body.name)
-	match body.name:
-		"DoubleJumpCollectible":
-			print("collectable")
-			can_double_jump = true
-		#"DashCollectible":
-		#	enable_dash()
-	body.queue_free()
+func get_ability(str):
+	if str == "double_jump":
+		can_double_jump = true
 
 func _physics_process(delta):
-	if is_dashing:
-		update_dash(delta)
-	else:
-		update_movement(delta)
-	if is_on_floor() and double_jump:
-		double_jump = false
+	if !died:
+		if is_dashing:
+			update_dash(delta)
+		else:
+			update_movement(delta)
+		if is_on_floor() and double_jump:
+			double_jump = false
+		if is_on_floor():
+			time_off_floor = 0.0
+		else:
+			time_off_floor += delta
 	update_animation()
+	if died:
+		if timer_death == 0.0:
+			timer_death = death_time
+			velocity = Vector2(0.0, 0.0)
+		else:
+			timer_death -= delta
+		if timer_death < 0.0:
+			queue_free()
+			get_tree().reload_current_scene()
+			return ;
 	move_and_slide()
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if collision.get_collider():
-			if collision.get_collider().name=="player":
-				queue_free()
 
 
 func update_animation():
-	if !is_on_floor():
+	if died:
+		sprite.play("die")
+	elif !is_on_floor() and time_off_floor >= 0.05:
 		sprite.play("jump")
 	elif is_dashing:
 		sprite.play("dash")
@@ -51,7 +63,7 @@ func update_animation():
 	else:
 		sprite.play("idle")
 	if facing_dir > 0:
-		sprite.flip_h = false   # facing right
+		sprite.flip_h = false
 	elif facing_dir < 0:
 		sprite.flip_h = true 
 
@@ -62,17 +74,18 @@ func update_movement(delta):
 		velocity.y += gravity * delta
 
 	if Input.is_action_just_pressed("Space") and !double_jump and !is_dashing:
-		if !is_on_floor() and can_double_jump:
+		if is_on_floor()  or time_off_floor < 0.05:
 			velocity.y = jump_velocity
+		elif !is_on_floor() and can_double_jump:
+			velocity.y = jump_velocity * 0.67
 			double_jump = true
-		elif is_on_floor():
-			velocity.y = jump_velocity
+
 
 	var direction := Input.get_axis("Left", "Right")
 	if direction != 0:
 		facing_dir = sign(direction)
 
-	if Input.is_action_just_pressed("Dash"):
+	if Input.is_action_just_pressed("Dash") and can_dash:
 		start_dash()
 		return
 

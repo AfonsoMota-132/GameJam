@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwbygmii8u80k"]
+
+[ext_resource type="Script" uid="uid://ck2vj60dopdtg" path="res://double_jump_collectible.gd" id="1_fc22a"]
+[ext_resource type="Texture2D" uid="uid://banbxu7lkrtjh" path="res://tiles/coin.png" id="2_iw8er"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gycgq"]
+radius = 185.71436
+
+[node name="Collectable" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_fc22a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+scale = Vector2(0.069999985, 0.069999985)
+shape = SubResource("CircleShape2D_gycgq")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.069999985, 0.069999985)
+texture = ExtResource("2_iw8er")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgwedkgstsxf5"]
+
+[ext_resource type="Script" uid="uid://c2c70t27yr8ko" path="res://death_box.gd" id="1_m3ky0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwdiv"]
+size = Vector2(1286, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vi6k"]
+size = Vector2(32, 715)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c44f2"]
+size = Vector2(20, 763.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm0m5"]
+size = Vector2(1331, 9.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DeathBox" type="StaticBody2D" parent="."]
+position = Vector2(3, 27)
+
+[node name="DeathBoxCollission" type="CollisionShape2D" parent="DeathBox"]
+position = Vector2(639, 23)
+shape = SubResource("RectangleShape2D_xwdiv")
+metadata/_edit_lock_ = true
+
+[node name="DeathArea" type="Area2D" parent="."]
+script = ExtResource("1_m3ky0")
+
+[node name="DeathAreaCollission" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(639, 13)
+shape = SubResource("RectangleShape2D_xwdiv")
+
+[node name="BorderBox" type="StaticBody2D" parent="."]
+
+[node name="LeftCollission" type="CollisionShape2D" parent="BorderBox"]
+position = Vector2(-11, -362.5)
+shape = SubResource("RectangleShape2D_7vi6k")
+
+[node name="RightCollission" type="CollisionShape2D" parent="BorderBox"]
+position = Vector2(1291, -338.75)
+shape = SubResource("RectangleShape2D_c44f2")
+
+[node name="TopCollission" type="CollisionShape2D" parent="BorderBox"]
+position = Vector2(640.5, -724.25)
+shape = SubResource("RectangleShape2D_mm0m5")
