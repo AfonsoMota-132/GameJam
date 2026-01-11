@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxcu4e5frwfcn"]
+[gd_scene load_steps=13 format=3 uid="uid://dxcu4e5frwfcn"]
 
 [ext_resource type="Script" uid="uid://bu1s3ow5nrxi6" path="res://dialogue/balloon.gd" id="1_j81sh"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_p2t4i"]
+[ext_resource type="Texture2D" uid="uid://cy4gu75i4doxn" path="res://dialogue/Narrator.png" id="2_qoi4o"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_qoi4o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -128,6 +129,7 @@ metadata/_edit_lock_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Balloon/MarginContainer"]
 position = Vector2(576, 110.25)
 scale = Vector2(1.3740741, 1.3740741)
+texture = ExtResource("2_qoi4o")
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/Sprite2D"]
