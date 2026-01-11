@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=4 uid="uid://dfkrtde110rwn"]
+
+[ext_resource type="Script" uid="uid://jf4e6prpn6tw" path="res://Scene/Planet3/thirdplanet.gd" id="1_kingr"]
+[ext_resource type="Texture2D" uid="uid://cijapys65lo3w" path="res://tiles/planet3/planeta2.png" id="2_m7o3k"]
+[ext_resource type="Texture2D" uid="uid://bn1y33vhkqbxd" path="res://tiles/planet3/FireSet.png" id="3_gb46k"]
+[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_pvtd5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tf2b"]
+texture = ExtResource("3_gb46k")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, -8, -8, -8, -8, 8, 8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/animation_separation = Vector2i(6, 9)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.0270023, -7.0040865, 3.0049078, -7.026181, 2.0990164, -6.0540056, 2.0327318, -5.9877205, 0.06628473, -5.015545, 0.06628473, -4.99345, -4.90507, -4.0212746, -4.9713545, -3.9549885, -8, -3.0049076, -8, -2.982813, 0.9500811, -2.0106373, 1.0163659, -1.9443512, 0.08837968, -1.0605564, 0.04418981, -0.9058914, -1.9222572, -0.99427223, -1.9443521, -0.044189453, -1.9664469, 0.022094727, -4.9271646, 0.9058914, -5.015544, 1.0384598, -8, 2.0106354, -8, 2.0106373, 0, 3.0049076, -0.022094965, 3.0049076, 1.9885417, 4.0212727, 1.9664468, 4.0212746, -5.965626, 4.99345, -5.965626, 5.015545, -2.0769217, 6.0760994, -2.0106368, 6.03191, 0.9942709, 7.0040865, 1.0384607, 7.0040855, 2.916528, 8, 3.0049076, 8, 8, -8, 8)
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yf16d"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_5tf2b")
+
+[node name="thirdPlanet" type="Node2D"]
+script = ExtResource("1_kingr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 2
+z_index = -1
+offset_left = -4.0
+offset_top = -719.0
+offset_right = 1916.0
+offset_bottom = 361.0
+scale = Vector2(0.66941786, 0.66941786)
+texture = ExtResource("2_m7o3k")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(2.8, 2.8)
+tile_map_data = PackedByteArray("AAAAAP//AQACAAIAAAABAP//AQACAAIAAAACAP//AQACAAIAAAARAPz/AQACAAQAAAASAPz/AQACAAQAAAAZAP//AQABAAIAAAAaAP//AQABAAIAAAAbAP//AQABAAIAAAAcAP//AQABAAIAAAAJAP7/AQABAAIAAAAKAP7/AQABAAIAAAAIAP7/AQABAAIAAAAHAP7/AQABAAIAABALAP7/AQABAAIAAAAYAP//AQABAAIAAAAMAP3/AQABAAIAAAAMAPz/AQABAAIAAAAMAP7/AQABAAIAAAAMAPv/AQABAAIAAAAGAPv/AQABAAIAAAAHAPv/AQABAAIAAAAIAPv/AQABAAIAAAAFAPv/AQABAAIAAAAEAPv/AQABAAIAAAADAPv/AQABAAIAAAAEAPj/AQABAAIAABAFAPj/AQABAAIAAAACAPv/AQABAAIAAAABAPv/AQABAAIAAAAAAPv/AQABAAIAABAGAPj/AQABAAIAAAAIAPj/AQABAAIAAAAJAPj/AQABAAIAAAAKAPj/AQABAAIAAAALAPj/AQABAAIAAAAMAPj/AQABAAIAAAAMAPn/AQABAAIAAAALAPn/AQABAAQAACAKAPn/AQABAAQAACADAP//AQACAAIAAAAMAPr/AQABAAIAAAA=")
+tile_set = SubResource("TileSet_yf16d")
+
+[node name="DoubleJump" type="Marker2D" parent="."]
+position = Vector2(65, -479)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(54, -187)
+metadata/_edit_lock_ = true
+
+[node name="GemPoint" type="Marker2D" parent="."]
+position = Vector2(1217, -79)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, -357)
+scale = Vector2(22554710, -768805)
+limit_enabled = false
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_pvtd5")
+volume_db = -2.0
+autoplay = true
+attenuation = 3.6049953
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
