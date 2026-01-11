@@ -24,7 +24,7 @@ func _ready():
 	var double = DoubleJump.instantiate()
 	double.global_position = doubleJump.global_position
 	double.ability = "double_jump"
-	double.image = "res://tiles/coin.png"
+	double.image = "res://tiles/cape.png"
 	add_child(double)
 	# Adding Crystal to end game
 	var crystal = DoubleJump.instantiate()
