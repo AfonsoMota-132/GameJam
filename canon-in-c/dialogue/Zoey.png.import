@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blikcwhii7aj5"
-path="res://.godot/imported/cape.png-e23129fea4066df2b8e8ed130a775961.ctex"
+uid="uid://chjitmbo34hcp"
+path="res://.godot/imported/Zoey.png-eb34dec9450a8bc100366123dd7e4fce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/cape.png"
-dest_files=["res://.godot/imported/cape.png-e23129fea4066df2b8e8ed130a775961.ctex"]
+source_file="res://dialogue/Zoey.png"
+dest_files=["res://.godot/imported/Zoey.png-eb34dec9450a8bc100366123dd7e4fce.ctex"]
 
 [params]
 

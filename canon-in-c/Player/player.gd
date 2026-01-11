@@ -23,6 +23,8 @@ var	time_off_floor := 0.0
 func get_ability(ability):
 	if ability == "double_jump":
 		can_double_jump = true
+	elif ability == "dash":
+		can_dash = true
 
 func _physics_process(delta):
 	if !died:
@@ -104,3 +106,6 @@ func update_dash(delta):
 
 	if dash_timer <= 0:
 		is_dashing = false
+
+func _ready():
+	return;

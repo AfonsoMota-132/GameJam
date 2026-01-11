@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://dp5b8n0uvk7hm"]
+[gd_scene load_steps=7 format=4 uid="uid://c26knc7rffalp"]
 
-[ext_resource type="Script" uid="uid://ct6anfddsdi21" path="res://Scene/Planet2/secondPlanet.gd" id="1_k6xnl"]
-[ext_resource type="Texture2D" uid="uid://cjkx70w5rms3i" path="res://tiles/planet2/SecondMapBck.png" id="2_k6xnl"]
-[ext_resource type="Texture2D" uid="uid://duvfus2wq8a1k" path="res://tiles/planet2/IceSet.png" id="3_yf16d"]
-[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_86uni"]
+[ext_resource type="Script" uid="uid://ct6anfddsdi21" path="res://Scene/Planet2/secondPlanet.gd" id="1_o2vni"]
+[ext_resource type="Texture2D" uid="uid://cjkx70w5rms3i" path="res://tiles/planet2/SecondMapBck.png" id="2_kk341"]
+[ext_resource type="Texture2D" uid="uid://duvfus2wq8a1k" path="res://tiles/planet2/IceSet.png" id="3_1dcby"]
+[ext_resource type="AudioStream" uid="uid://ca3xtolpbpjyr" path="res://tiles/planet1/Canon in D 8-bit Chiptune.mp3" id="4_lyr2w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6xnl"]
-texture = ExtResource("3_yf16d")
+texture = ExtResource("3_1dcby")
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 7.8174667, -8.122045, 7.9744797, 8.113167, -8.113166, 7.9744797)
@@ -43,7 +43,7 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_k6xnl")
 
 [node name="secondPlanet" type="Node2D"]
-script = ExtResource("1_k6xnl")
+script = ExtResource("1_o2vni")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 2
@@ -53,7 +53,7 @@ offset_top = -719.0
 offset_right = 1916.0
 offset_bottom = 361.0
 scale = Vector2(0.66941786, 0.66941786)
-texture = ExtResource("2_k6xnl")
+texture = ExtResource("2_kk341")
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
@@ -80,7 +80,7 @@ scale = Vector2(22554710, -768805)
 limit_enabled = false
 
 [node name="Ambient" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_86uni")
+stream = ExtResource("4_lyr2w")
 volume_db = -2.0
 autoplay = true
 attenuation = 3.6049953

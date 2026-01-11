@@ -1,6 +1,10 @@
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
+var portraits := {
+	"Narrator": preload("res://dialogue/Narrator.png"),
+	"Zoey": preload("res://dialogue/Zoey.png")
+}
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
@@ -67,6 +71,7 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
+@onready var portrait: Sprite2D = $Balloon/MarginContainer/Portrait
 
 func _ready() -> void:
 	balloon.hide()
@@ -129,6 +134,11 @@ func apply_dialogue_line() -> void:
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
 
+	if portraits.has(dialogue_line.character):
+		portrait.texture = portraits[dialogue_line.character]
+		portrait.show()
+	else:
+		portrait.hide()
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
 

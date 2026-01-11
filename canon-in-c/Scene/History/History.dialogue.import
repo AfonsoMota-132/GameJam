@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c2u03dhnwculd"
+path="res://.godot/imported/History.dialogue-1e24475c1759644add49cd27a543b846.tres"
+
+[deps]
+
+source_file="res://Scene/History/History.dialogue"
+dest_files=["res://.godot/imported/History.dialogue-1e24475c1759644add49cd27a543b846.tres"]
+
+[params]
+
+defaults=true

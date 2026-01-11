@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var playButton: Button = $PlayButton
-@onready var nextScene = preload("res://Scene/Planet1/tutorial.tscn")
+@onready var nextScene = preload("res://Scene/History/History.tscn")
 func _ready():
 	playButton.pressed.connect(_on_button_pressed)
 

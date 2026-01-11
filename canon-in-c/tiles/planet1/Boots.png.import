@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j4del2ks3x80"
-path="res://.godot/imported/Boots.png-66e58f0fb6477d3a4eb9ae6d25ed0c85.ctex"
+path="res://.godot/imported/Boots.png-7f3e37315fa8c25c82de315d880e201a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Boots.png"
-dest_files=["res://.godot/imported/Boots.png-66e58f0fb6477d3a4eb9ae6d25ed0c85.ctex"]
+source_file="res://tiles/planet1/Boots.png"
+dest_files=["res://.godot/imported/Boots.png-7f3e37315fa8c25c82de315d880e201a.ctex"]
 
 [params]
 

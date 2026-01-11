@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc4k6huqfu1vr"
-path="res://.godot/imported/Gem.png-545a92fb4df4047ab5b1d111f7302bcf.ctex"
+uid="uid://din2ddqc7qldt"
+path="res://.godot/imported/snow-effects.png-759d1ab443ca0eaa7af445964901df3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Gem.png"
-dest_files=["res://.godot/imported/Gem.png-545a92fb4df4047ab5b1d111f7302bcf.ctex"]
+source_file="res://tiles/planet2/snow-effects.png"
+dest_files=["res://.godot/imported/snow-effects.png-759d1ab443ca0eaa7af445964901df3d.ctex"]
 
 [params]
 
