@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 160.0
-@export var dash_speed := 240.0
+@export var dash_speed := 350.0
 @export var dash_time := 0.5
 @export var death_time := 1.9
 @export var jump_time := 0.5
@@ -15,8 +15,8 @@ var facing_dir := 1
 var is_dashing := false
 var dash_timer := 0.0
 var double_jump := false
-var can_double_jump := false
-var can_dash := false
+var can_double_jump := true
+var can_dash := true  
 var died := false
 var timer_death := 0.0
 var	time_off_floor := 0.0
